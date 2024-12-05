@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from './redux/contactsOps';
+import { fetchContacts } from './redux/contacts/operations';
 import { useToggle } from './hooks/useToggle';
 import Title from './components/Title/Title';
 import { Toaster } from 'react-hot-toast';

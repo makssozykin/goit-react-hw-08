@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 import toast from 'react-hot-toast';
-import { deleteContact } from '../../redux/contactsOps';
+import { deleteContact } from '../../redux/contacts/operations';
 import { IoIosContact } from 'react-icons/io';
 import { FcPhoneAndroid } from 'react-icons/fc';
 

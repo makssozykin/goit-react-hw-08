@@ -3,8 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import { nanoid } from 'nanoid';
-import { selectContacts } from '../../redux/contactsSlice';
-import { addContact, editContact } from '../../redux/contactsOps';
+import { selectContacts } from '../../redux/contacts/selectors';
+import { addContact, editContact } from '../../redux/contacts/operations';
 import css from './ContactForm.module.css';
 
 const nameRegex = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;

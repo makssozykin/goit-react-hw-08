@@ -4,7 +4,6 @@ import { IoMdClose } from 'react-icons/io';
 import s from './ContactModal.module.css';
 
 export const ContactModal = ({ isOpenModal, onCloseModal, contact }) => {
-  console.log(contact);
   return (
     <Modal
       isOpen={isOpenModal}

@@ -11,6 +11,8 @@ import { Loader } from '../../components/Loader/Loader';
 
 import { ContactList } from '../../components/ContactList/ContactList';
 import { ContactModal } from '../../components/ContactModal/ContactModal';
+
+import css from './ContactsPage.module.css';
 const ContactsPage = () => {
   const dispatch = useDispatch();
   const { items, loading, error } = useSelector(state => state.contacts);
@@ -25,7 +27,7 @@ const ContactsPage = () => {
     setContact(contact);
   };
   return (
-    <div className="app">
+    <div className={css.app}>
       <Title title="Phonebook" />
       <ContactForm />
       <SearchBox />

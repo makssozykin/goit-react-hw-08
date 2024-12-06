@@ -13,7 +13,7 @@ const RegistrationPage = lazy(() =>
 );
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage/ContactsPage'));
-const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
+// const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 
 import './App.css';
 
@@ -52,7 +52,7 @@ function App() {
             <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
           }
         />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </Layout>
   );

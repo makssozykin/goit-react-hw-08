@@ -31,16 +31,22 @@ export const Contact = ({ contact, onModal, contactInfo }) => {
           {number}
         </p>
       </div>
-      <button className={css['delete-btn']} type="button" onClick={handleModal}>
-        Edit
-      </button>
-      <button
-        className={css['delete-btn']}
-        type="button"
-        onClick={handleDeleteContact}
-      >
-        Delete
-      </button>
+      <div className={css['contact-item-buttons']}>
+        <button
+          className={css['contact-item-btn']}
+          type="button"
+          onClick={handleModal}
+        >
+          Edit
+        </button>
+        <button
+          className={css['contact-item-btn']}
+          type="button"
+          onClick={handleDeleteContact}
+        >
+          Delete
+        </button>
+      </div>
     </>
   );
 };

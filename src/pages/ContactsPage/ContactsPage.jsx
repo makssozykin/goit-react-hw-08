@@ -4,7 +4,6 @@ import { Toaster } from 'react-hot-toast';
 import { useToggle } from '../../hooks/useToggle';
 import { fetchContacts } from '../../redux/contacts/operations';
 
-import { Title } from '../../components/Title/Title';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { SearchBox } from '../../components/SearchBox/SearchBox';
 import { Loader } from '../../components/Loader/Loader';
@@ -28,19 +27,23 @@ const ContactsPage = () => {
   };
   return (
     <div className={css.app}>
-      <Title title="Phonebook" />
       <ContactForm />
-      <SearchBox />
-      {loading && !error && <Loader />}
-      {error && <p>{error}</p>}
-      {items.length > 0 && (
-        <ContactList openModal={openModal} contactInfo={contactInfo} />
-      )}
-      <ContactModal
-        isOpenModal={isOpenModal}
-        onCloseModal={closeModal}
-        contact={contact}
-      />
+      <div className={css['contacts-container']}>
+        <SearchBox />
+        {loading && !error && <Loader />}
+        {error && <p>{error}</p>}
+        {items.length !== 0 ? (
+          <ContactList openModal={openModal} contactInfo={contactInfo} />
+        ) : (
+          <ContactList text="Телефонна книжка порожня. Додайте контакт!" />
+        )}
+        <ContactModal
+          isOpenModal={isOpenModal}
+          onCloseModal={closeModal}
+          contact={contact}
+        />
+      </div>
+
       <Toaster position="top-right" reverseOrder={false} />
     </div>
   );

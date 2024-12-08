@@ -16,7 +16,6 @@ export const register = createAsyncThunk(
   async (user, thunkAPI) => {
     try {
       const response = await axios.post('/users/signup', user);
-      console.log(response.data);
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {
@@ -28,7 +27,6 @@ export const register = createAsyncThunk(
 export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
   try {
     const response = await axios.post('/users/login', user);
-    console.log(response.data);
     setAuthHeader(response.data.token);
     return response.data;
   } catch (error) {
@@ -50,14 +48,12 @@ export const refreshUser = createAsyncThunk(
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-    console.log(persistedToken);
     if (persistedToken === null) {
       return thunkAPI.rejectWithValue('Sorry, unable to fetch user');
     }
     try {
       setAuthHeader(persistedToken);
       const response = await axios.get('/users/current');
-      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

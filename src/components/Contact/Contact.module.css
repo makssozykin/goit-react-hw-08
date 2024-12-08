@@ -14,7 +14,14 @@
   }
 }
 
-.delete-btn {
+.contact-item-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-item-btn {
   background-color: teal;
   color: white;
   padding: 10px 15px;

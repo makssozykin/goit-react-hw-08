@@ -7,7 +7,6 @@ import css from './ContactList.module.css';
 
 export const ContactList = ({ openModal, contactInfo, text }) => {
   const visibleContacts = useSelector(selectFilteredContacts);
-  console.log(visibleContacts.length);
 
   return (
     <>

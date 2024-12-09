@@ -16,15 +16,18 @@ const ContactsPage = () => {
   const dispatch = useDispatch();
   const { items, loading, error } = useSelector(state => state.contacts);
   const [contact, setContact] = useState('');
+  const [btn, setBtn] = useState('');
   const { isOpenModal, openModal, closeModal } = useToggle();
 
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const contactInfo = contact => {
+  const contactInfo = (contact, btn) => {
     setContact(contact);
+    setBtn(btn);
   };
+
   return (
     <div className={css.app}>
       <ContactForm />
@@ -41,6 +44,7 @@ const ContactsPage = () => {
           isOpenModal={isOpenModal}
           onCloseModal={closeModal}
           contact={contact}
+          btn={btn}
         />
       </div>
 

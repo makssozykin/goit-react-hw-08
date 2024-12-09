@@ -9,7 +9,6 @@ export const selectFilteredContacts = createSelector(
     const nameArr = items.filter(item =>
       item.name.toLowerCase().startsWith(filter.toLowerCase())
     );
-    console.log(nameArr);
     const numberArr = items.filter(item =>
       item.number.trim().split('-').join('').startsWith(filter)
     );

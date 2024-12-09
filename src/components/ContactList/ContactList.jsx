@@ -25,7 +25,7 @@ export const ContactList = ({ openModal, contactInfo, text }) => {
             ))
           ) : (
             <li className={css['contact-no-item']}>
-              <p>Контакт відсутній</p>
+              <p>Контакт не знайдено</p>
             </li>
           )
         ) : (

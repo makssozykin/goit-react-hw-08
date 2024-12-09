@@ -53,11 +53,6 @@ export const RegistrationForm = () => {
             margin="normal"
             helperText="The name must contain only letters, apostrophes, hyphens and indents."
             type="text"
-            // inputProps={{
-            //   inputMode: 'text',
-            //   pattern:
-            //     '^[a-zA-Zа-яА-Я]+(([a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$',
-            // }}
             autoComplete="name"
             name="name"
             value={name}

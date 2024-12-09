@@ -38,31 +38,10 @@ export const ContactForm = ({
   },
   onCloseModal,
 }) => {
-  // const initialValues = {
-  //   name: '',
-  //   number: '',
-  // };
   const nameId = nanoid();
   const numberId = nanoid();
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
-  // const handleSubmit = (values, actions) => {
-  //   const isInContacts = contacts.some(
-  //     ({ name }) => name.toLowerCase() === values.name.toLowerCase()
-  //   );
-  //   // if (isInContacts) {
-  //   //   toast.error(`${values.name} is already in contacts.`);
-  //   //   actions.resetForm();
-  //   //   return;
-  //   // }
-  //   initialValues.name === ''
-  //     ? dispatch(addContact({ ...values }))
-  //     : dispatch(editContact({ ...values }));
-  //   initialValues.name === ''
-  //     ? toast.success('New contact has been added to your phonebook')
-  //     : toast.success(`Contact ${values.name} is updated to your phonebook`);
-  //   actions.resetForm();
-  // };
 
   const handleSubmitAdding = (values, actions) => {
     const isInContacts = contacts.some(

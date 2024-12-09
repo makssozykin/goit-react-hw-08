@@ -4,7 +4,6 @@ import css from './LoginPage.module.css';
 const LoginPage = () => {
   return (
     <main className={css.loginPage}>
-      <h1>Login</h1>
       <LoginForm />
     </main>
   );

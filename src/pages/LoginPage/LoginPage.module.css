@@ -1,0 +1,13 @@
+.loginPage {
+  padding: 16px 40px;
+  flex: 1 1 auto;
+  background-color: rgba(251, 251, 27, 0.3);
+  background-image: url('../../images/vintage-and-modern-telephones.jpg');
+  background-size: contain;
+  background-position: center;
+}
+
+.loginPage h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}

@@ -7,6 +7,7 @@
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 5px;
+  background-color: rgba(0, 183, 255);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
   list-style: none;
   height: auto;
@@ -34,7 +35,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.25rem 0.5rem;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid rgba(19, 11, 238, 0.8);
   scroll-snap-align: start;
 }
 

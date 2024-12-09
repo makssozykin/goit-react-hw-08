@@ -6,6 +6,7 @@
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 183, 255);
   margin-bottom: 1rem;
   padding: 1rem;
   gap: 10px;
@@ -18,7 +19,7 @@
     padding: 10px 15px;
     border-radius: 8px;
     border: none;
-    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px 4px rgba(0, 183, 255);
   }
 }
 .label {
@@ -26,13 +27,23 @@
   display: flex;
   flex-direction: column;
   & span {
+    color: rgb(45, 81, 212);
+    font-size: 20px;
     font-weight: bold;
   }
 }
 .input {
-  border-radius: 8px;
+  height: 30px;
+  border: none;
+  border-radius: 2px;
   padding: 5px;
-  box-shadow: 2px 2px 4px 4px lightgray;
+  box-shadow: 2px 2px 4px 4px rgba(0, 183, 255);
+  font-size: 18px;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid rgb(45, 81, 212);
 }
 
 .error {

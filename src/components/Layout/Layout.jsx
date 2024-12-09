@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { AppBar } from '../AppBar/AppBar';
+import { AppFooter } from '../AppFooter/AppFooter';
 
 export const Layout = ({ children }) => {
   return (
@@ -10,6 +11,7 @@ export const Layout = ({ children }) => {
         {children}
         <Outlet />
       </Suspense>
+      <AppFooter />
     </>
   );
 };

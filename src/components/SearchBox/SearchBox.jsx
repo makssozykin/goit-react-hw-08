@@ -18,6 +18,7 @@ export const SearchBox = () => {
         className={css.input}
         type="text"
         value={filter}
+        placeholder="Почніть пошук ..."
         onChange={e => handleFilterChange(e.target.value)}
       />
     </div>

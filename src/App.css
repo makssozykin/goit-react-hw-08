@@ -1,5 +1,8 @@
 #root {
+  display: flex;
+  flex-direction: column;
   min-width: 550px;
   max-width: 1540px;
+  min-height: 100%;
   margin: 0 auto;
 }

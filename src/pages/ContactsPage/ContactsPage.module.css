@@ -1,13 +1,17 @@
 .app {
   display: flex;
   align-items: start;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 40px;
   width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0 40px;
-  border-radius: 10px;
+  flex: 1 1 auto;
+  padding: 16px 40px;
+
+  background-color: rgba(251, 251, 27, 0.3);
+  background-image: url('../../images/vintage-and-modern-telephones.jpg');
+
+  background-size: contain;
+  background-position: center;
 }
 
 .contacts-container {

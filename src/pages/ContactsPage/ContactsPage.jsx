@@ -29,7 +29,7 @@ const ContactsPage = () => {
   };
 
   return (
-    <div className={css.app}>
+    <main className={css.app}>
       <ContactForm />
       <div className={css['contacts-container']}>
         <SearchBox />
@@ -49,7 +49,7 @@ const ContactsPage = () => {
       </div>
 
       <Toaster position="top-right" reverseOrder={false} />
-    </div>
+    </main>
   );
 };
 

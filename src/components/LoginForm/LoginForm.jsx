@@ -28,14 +28,14 @@ export const LoginForm = () => {
 
   const handleLoginSubmit = e => {
     e.preventDefault();
-    const form = e.currentTarget;
     dispatch(
       login({
-        email: form.elements.email.value,
-        password: form.elements.password.value,
+        email,
+        password,
       })
     );
-    form.reset();
+    setEmail('');
+    setPassword('');
   };
   return (
     <Box className={css.boxFormStyle}>

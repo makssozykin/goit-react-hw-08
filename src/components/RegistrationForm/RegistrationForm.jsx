@@ -32,15 +32,11 @@ export const RegistrationForm = () => {
 
   const handleRegisterSubmit = e => {
     e.preventDefault();
-    const form = e.target;
-    dispatch(
-      register({
-        name: form.elements.name.value,
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
-    form.reset();
+    const user = { name, email, password };
+    dispatch(register(user));
+    setName('');
+    setEmail('');
+    setPassword('');
   };
   return (
     <>

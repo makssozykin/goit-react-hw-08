@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 axios.defaults.baseURL = 'https://connections-api.goit.global/';
 
@@ -14,11 +15,15 @@ const clearAuthHeader = () => {
 export const register = createAsyncThunk(
   'auth/register',
   async (user, thunkAPI) => {
+    console.log(user);
     try {
       const response = await axios.post('/users/signup', user);
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {
+      Notify.failure(
+        `Такий користувач ${error.response.data.keyValue.email} вже існує!`
+      );
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -30,6 +35,7 @@ export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
     setAuthHeader(response.data.token);
     return response.data;
   } catch (error) {
+    Notify.failure('Невірно ведено пошту або пароль! Спробуйте ще раз! ');
     return thunkAPI.rejectWithValue(error.message);
   }
 });

@@ -65,7 +65,7 @@ export const RegistrationForm = () => {
             helperText="Please enter a valid email address"
             fullWidth
             id="email"
-            label="Email Address"
+            label="Email"
             type="email"
             name="email"
             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
